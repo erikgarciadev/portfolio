@@ -1,0 +1,17 @@
+{
+    "files.eol": "\n",
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "prettier.semi": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "prettier.trailingComma": "all",
+    "prettier.singleQuote": true,
+    "prettier.printWidth": 120,
+    "prettier.tabWidth": 4,
+    "prettier.endOfLine": "crlf",
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+    "typescript.suggestionActions.enabled": false,
+    "editor.formatOnSave": true
+}
