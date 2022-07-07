@@ -1,20 +1,51 @@
-import { NextPage } from "next";
-import Image from "next/image";
+import { NextPage } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useEffect, useRef, useState } from 'react'
+import { Header, Logo, IconMenu, Nav } from './style'
 
 const Navbar: NextPage = () => {
+    const [activeNavbar, setActiveNavbar] = useState<boolean>(false)
+    const iconRef = useRef<any>(null)
+
+    useEffect(() => {
+        const onScroll = (e: Event) => {
+            if (activeNavbar) {
+                setActiveNavbar(false)
+                iconRef?.current?.classList.remove('fa-times')
+            }
+        }
+        window.addEventListener('scroll', onScroll)
+        return () => {
+            window.removeEventListener('scroll', onScroll)
+        }
+    }, [activeNavbar])
+
     return (
-        <nav>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span >
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </nav>
+        <Header>
+            <div
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '70px' }}
+                className="container"
+            >
+                <Link href="/">
+                    <Logo>
+                        <Image height="40" width="40" src="/logo.svg" alt="logo" />
+                    </Logo>
+                </Link>
+
+                <IconMenu
+                    ref={iconRef}
+                    onClick={() => setActiveNavbar(!activeNavbar)}
+                    className={`fas ${activeNavbar ? 'fa-times' : 'fa-bars'}`}
+                ></IconMenu>
+                <Nav active={activeNavbar}>
+                    <a href="#home">Inicio</a>
+                    <a href="#about">Sobre mí</a>
+                    <a href="#projects">Proyectos</a>
+                    {/* <a href="#contact">Contacto</a> */}
+                </Nav>
+            </div>
+        </Header>
     )
 }
 
