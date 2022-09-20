@@ -28,7 +28,7 @@ const Footer: NextPage = () => {
     return (
         <FooterStyled>
             {socialMedia.map((data, i) => (
-                <a href={data.href} target="_blank" rel="noopener noreferrer">
+                <a key={i} href={data.href} target="_blank" rel="noopener noreferrer">
                     <span>
                         <Image src={data.src} alt={data.alt} width={36} height={36} />
                     </span>
