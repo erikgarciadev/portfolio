@@ -1,33 +1,7 @@
 import type { NextPage } from 'next'
 import CardProject from './CardProject'
+import { projects } from './data'
 import { ContainerProjects } from './style'
-
-const projects: {
-    src: string
-    title: string
-    keys: string[]
-}[] = [
-    {
-        src: '/images/landing-page.jpg',
-        title: 'Landing Page',
-        keys: ['Html', 'Css', 'Js'],
-    },
-    {
-        src: '/images/crud-pokemon.jpg',
-        title: 'Crud Pokemon',
-        keys: ['React', 'Css', 'Api'],
-    },
-    {
-        src: '/images/portafolio.jpg',
-        title: 'Portafolio',
-        keys: ['NextJs', 'Styled-components'],
-    },
-    {
-        src: '/images/resource-manager.jpg',
-        title: 'Resource Manager',
-        keys: ['React', 'Firebase', 'react-router'],
-    },
-]
 
 const Projects: NextPage = () => {
     return (
@@ -42,7 +16,13 @@ const Projects: NextPage = () => {
             <h2 style={{ textAlign: 'center', paddingTop: '20px', paddingBottom: '20px' }}>Proyectos</h2>
             <ContainerProjects>
                 {projects.map((project, i) => (
-                    <CardProject key={i} src={project.src} title={project.title} keys={project.keys} />
+                    <CardProject
+                        key={i}
+                        src={project.src}
+                        title={project.title}
+                        keys={project.keys}
+                        urls={project.urls}
+                    />
                 ))}
             </ContainerProjects>
         </section>
