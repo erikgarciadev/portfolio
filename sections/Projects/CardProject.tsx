@@ -1,14 +1,21 @@
 import React from 'react'
+import Image from 'next/image'
 
 const CardProject = ({
     src,
     title,
     keys,
     description,
+    urls = [],
 }: {
     src: string
     title: string
     keys: string[]
+    urls?: {
+        src: string
+        href: string
+        alt: string
+    }[]
     description?: string
 }) => {
     return (
@@ -44,7 +51,7 @@ const CardProject = ({
                 >
                     {title}
                 </p>
-                <div style={{ display: 'flex', gap: '5px', width: '100%', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', gap: '0.5em', width: '100%', flexWrap: 'wrap' }}>
                     {keys.map((key, i) => (
                         <p
                             key={i}
@@ -59,6 +66,15 @@ const CardProject = ({
                         >
                             {key}
                         </p>
+                    ))}
+                </div>
+                <div style={{ display: 'flex', gap: '0.5em', width: '100%', flexWrap: 'wrap', marginTop: '1em' }}>
+                    {urls.map((url, i) => (
+                        <a key={i} href={url.href} target="_blank" rel="noopener noreferrer">
+                            <span>
+                                <Image src={url.src} alt={url.alt} width={30} height={30} />
+                            </span>
+                        </a>
                     ))}
                 </div>
             </div>
