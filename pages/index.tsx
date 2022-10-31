@@ -19,7 +19,7 @@ const Index: NextPage = () => {
                 <Home />
                 <About />
                 <Projects />
-                {/* <Contact /> */}
+                <Contact />
             </main>
             <Footer></Footer>
         </div>

@@ -1,73 +1,79 @@
 import type { NextPage } from 'next'
-import Image from 'next/image'
+import Alert from '../../components/Alert'
+import FormField from '../../components/FormField'
+import Input from '../../components/Input'
+import Loader from '../../components/Loader'
+import TextArea from '../../components/TextArea'
+import { ContactStyled, FormContactStyled } from './style'
 import useContact from './useContact'
 
 const Contact: NextPage = () => {
-    const { form, errors, handleChange, handleSubmit } = useContact()
+    const { form, errors, handleChange, handleSubmit, alert, setAlert, loading } = useContact()
     return (
-        <section
-            id="contact"
-            className="container"
-            style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', padding: '2em' }}
-        >
-            <h2 style={{ textAlign: 'center', paddingTop: '20px' }}>Contact</h2>
-            <form
-                onSubmit={handleSubmit}
-                style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    maxWidth: '1000px',
-                    width: '100%',
-                    margin: '0 auto',
-                }}
-            >
+        <ContactStyled id="contact" className="container">
+            <h2 style={{ textAlign: 'center', paddingTop: '20px' }}>Contacto</h2>
+            <FormContactStyled method="post" data-netlify="true" name="contact-form" onSubmit={handleSubmit}>
+                <input type="hidden" name="form-name" value="contact-form" />
                 <div>
-                    <label style={{ fontSize: '18px', fontWeight: 'bold', color: 'var(--primary)' }}>Email</label>
-                    <input
-                        style={{ width: '100%', padding: '0.5em', borderRadius: '10px' }}
-                        onChange={handleChange}
-                        name="email"
-                        value={form.email}
-                        autoComplete="off"
-                    ></input>
-                    {errors.email && <p className="text-error">{errors.email}</p>}
+                    <FormField errorMessage={errors.name || ''} label="Nombres">
+                        <Input
+                            disabled={loading}
+                            onChange={handleChange as () => void}
+                            name="name"
+                            value={form.name}
+                            autoComplete="off"
+                            autoFocus
+                            placeholder="p. ej. , Erik Garcia"
+                        />
+                    </FormField>
+                </div>
+                <div>
+                    <FormField errorMessage={errors.email || ''} label="Email">
+                        <Input
+                            disabled={loading}
+                            onChange={handleChange as () => void}
+                            name="email"
+                            value={form.email}
+                            autoComplete="off"
+                            placeholder="p. ej. , erik.gt@gmail.com"
+                        />
+                    </FormField>
                 </div>
                 <div style={{ marginTop: '.5em', display: 'flex', flexDirection: 'column' }}>
-                    <label style={{ fontSize: '18px', fontWeight: 'bold', color: 'var(--primary)' }}>Asunto</label>
-                    <textarea
-                        style={{
-                            resize: 'none',
-                            padding: '0.5em',
-                            borderRadius: '10px',
-                            height: '100px',
-                            width: '100%',
-                        }}
-                        onChange={handleChange}
-                        name="matter"
-                        value={form.matter}
-                    ></textarea>
-                    {errors.matter && <p className="text-error">{errors.matter}</p>}
+                    <FormField label="Asunto" errorMessage={errors.matter || ''}>
+                        <TextArea
+                            disabled={loading}
+                            onChange={handleChange as () => void}
+                            name="matter"
+                            value={form.matter}
+                            placeholder="Cuéntame los detalles del servicio para poder apoyarte a realizarlo"
+                        />
+                    </FormField>
                 </div>
+                <Alert
+                    style={{
+                        marginTop: '0.5em',
+                        cursor: 'pointer',
+                    }}
+                    onClick={() => {
+                        setAlert({
+                            show: false,
+                            message: '',
+                            type: 'danger',
+                        })
+                    }}
+                    show={alert.show}
+                    type={alert.type}
+                >
+                    {'Mensaje'}
+                </Alert>
                 <div style={{ marginTop: '1em' }}>
-                    <button
-                        type="submit"
-                        style={{
-                            padding: '0.5em',
-                            border: '2px solid var(--primary)',
-                            background: 'transparent',
-                            cursor: 'pointer',
-                            borderRadius: '10px',
-                            width: '100px',
-                            fontWeight: 'bold',
-                            color: 'var(--primary)',
-                            fontSize: '14px',
-                        }}
-                    >
-                        Enviar
+                    <button disabled={loading} type="submit" className="button_contact">
+                        {loading ? <Loader /> : 'Enviar'}
                     </button>
                 </div>
-            </form>
-        </section>
+            </FormContactStyled>
+        </ContactStyled>
     )
 }
 

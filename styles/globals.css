@@ -1,31 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 :root {
-  --white: #fff;
-  --primary: #548bff;
+    --white: #fff;
+    --primary: #548bff;
+
+    --success: #4bbe2f;
+    --success-light: rgba(75, 190, 47, 0.1);
+    --danger: #ff0000;
+    --danger-light: rgba(255, 109, 105, 0.1);
 }
 
 .container {
-  max-width: 1280px;
-  width: 100%;
-  margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .text-error {
-    color: red;
-    font-size: 14px;
+    color: var(--danger);
+    font-size: 12px;
     font-weight: bold;
+}
+
+.button_contact {
+    padding: 0.5em;
+    border: 2px solid var(--primary);
+    background: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100px;
+    font-weight: bold;
+    color: var(--primary);
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

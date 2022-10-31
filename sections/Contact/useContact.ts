@@ -1,15 +1,26 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react'
+import { encode, isValidEmail } from '../../utils/util'
+
+const InitalForm = {
+    email: '',
+    matter: '',
+    name: '',
+}
 
 export default function useContact() {
-    const [form, setForm] = useState({
-        email: '',
-        matter: '',
+    const [form, setForm] = useState({ ...InitalForm })
+    const [errors, setErrors] = useState({ ...InitalForm })
+    const [loading, setLoading] = useState(false)
+    const [alert, setAlert] = useState<{
+        message: string
+        type: 'danger' | 'success'
+        show: boolean
+    }>({
+        message: '',
+        type: 'danger',
+        show: false,
     })
-    const [errors, setErrors] = useState({
-        email: '',
-        matter: '',
-    })
-    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>) => {
         const name = e.target.name
         setForm({
             ...form,
@@ -27,6 +38,33 @@ export default function useContact() {
         if (!isValid()) {
             return
         }
+        setLoading(true)
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encode({ 'form-name': 'contact-form', ...form }),
+        })
+            .then(() => {
+                setAlert({
+                    ...alert,
+                    message: '¡Muchas gracias! Nos comunicaremos pronto contigo',
+                    type: 'success',
+                    show: true,
+                })
+                setForm({
+                    ...InitalForm,
+                })
+                setLoading(false)
+            })
+            .catch(() => {
+                setAlert({
+                    ...alert,
+                    type: 'danger',
+                    message: 'Ocurrió un error. Volver a intentar',
+                    show: true,
+                })
+                setLoading(false)
+            })
     }
 
     const isValid = () => {
@@ -61,12 +99,9 @@ export default function useContact() {
         errors,
         handleChange,
         handleSubmit,
+        alert,
+        setAlert,
+        loading,
     }
-}
-
-const isValidEmail = (email: string) => {
-    return email.match(
-        /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-    )
 }
 
