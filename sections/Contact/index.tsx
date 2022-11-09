@@ -22,7 +22,6 @@ const Contact: NextPage = () => {
                             name="name"
                             value={form.name}
                             autoComplete="off"
-                            autoFocus
                             placeholder="p. ej. , Erik Garcia"
                         />
                     </FormField>
