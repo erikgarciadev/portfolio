@@ -38,23 +38,23 @@ export const projects: {
             },
         ],
     },
-    {
-        src: '/images/portafolio.jpg',
-        title: 'Portafolio',
-        keys: ['NextJs', 'Styled-components'],
-        urls: [
-            {
-                src: '/icons/socialMedia/github.svg',
-                href: 'https://github.com/erikgarciadev/portfolio',
-                alt: 'Github Icon',
-            },
-            // {
-            //     src: '/icons/socialMedia/internet.svg',
-            //     href: 'https://erikgarciadev.netlify.app/',
-            //     alt: 'Internet Icon',
-            // },
-        ],
-    },
+    // {
+    //     src: '/images/portafolio.jpg',
+    //     title: 'Portafolio',
+    //     keys: ['NextJs', 'Styled-components'],
+    //     urls: [
+    //         {
+    //             src: '/icons/socialMedia/github.svg',
+    //             href: 'https://github.com/erikgarciadev/portfolio',
+    //             alt: 'Github Icon',
+    //         },
+    //          {
+    //               src: '/icons/socialMedia/internet.svg',
+    //              href: 'https://erikgarciadev.netlify.app/',
+    //              alt: 'Internet Icon',
+    //          },
+    //     ],
+    // },
     {
         src: '/images/resource-manager.jpg',
         title: 'Resource Manager',
