@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import Projects from '../sections/Projects'
@@ -10,10 +9,6 @@ import About from '../sections/About'
 const Index: NextPage = () => {
     return (
         <div>
-            <Head>
-                <title>Erik Garcia</title>
-            </Head>
-
             <main>
                 <Navbar />
                 <Home />
@@ -27,4 +22,3 @@ const Index: NextPage = () => {
 }
 
 export default Index
-
