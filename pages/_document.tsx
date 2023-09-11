@@ -39,6 +39,7 @@ export default function Document() {
                     crossOrigin="anonymous"
                     referrerPolicy="no-referrer"
                 />
+                <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin="anonymous" />
             </Head>
             <body>
                 <Main />

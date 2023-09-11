@@ -31,20 +31,10 @@ const CardProject = ({
             <div
                 style={{
                     height: '250px',
+                    position: 'relative',
                 }}
             >
-                <img
-                    style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                    }}
-                    loading="lazy"
-                    height={'250px'}
-                    width={'450px'}
-                    src={src}
-                    alt={title}
-                />
+                <Image loading="lazy" layout="fill" objectFit="cover" src={src} alt={title} />
             </div>
             <div
                 style={{
