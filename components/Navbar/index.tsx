@@ -37,7 +37,14 @@ const Navbar: NextPage = () => {
                     ref={iconRef}
                     onClick={() => setActiveNavbar(!activeNavbar)}
                     className={`fas ${activeNavbar ? 'fa-times' : 'fa-bars'}`}
-                ></IconMenu>
+                >
+                    <Image
+                        width={25}
+                        height={21}
+                        src={activeNavbar ? '/icons/close.svg' : '/icons/bars.svg'}
+                        alt={activeNavbar ? 'Close Icon' : 'Bars Icon'}
+                    />
+                </IconMenu>
                 <Nav active={activeNavbar}>
                     <a href="#home">Inicio</a>
                     <a href="#about">Sobre mí</a>

@@ -22,17 +22,18 @@ export const Logo = styled.div`
     height: 40px;
     cursor: pointer;
 `
-export const IconMenu = styled.i.attrs((props) => ({
+export const IconMenu = styled.div.attrs((props) => ({
     className: props.className,
 }))`
     color: var(--primary);
-    font-size: 25px;
     display: none;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     transition: all 0.2s linear;
 
     @media (max-width: 768px) {
-        display: initial;
+        display: flex;
         &.fa-times {
             transform: rotate(180deg);
         }
