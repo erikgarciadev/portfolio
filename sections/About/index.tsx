@@ -1,53 +1,7 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import { AboutStyled } from './style'
-
-const skills = [
-    {
-        title: 'Html',
-        src: '/icons/tools/html.svg',
-    },
-    {
-        title: 'Css',
-        src: '/icons/tools/css.svg',
-    },
-    {
-        title: 'Javascript',
-        src: '/icons/tools/js.svg',
-    },
-    {
-        title: 'Typescript',
-        src: '/icons/tools/ts.svg',
-    },
-    {
-        title: 'React',
-        src: '/icons/tools/react.svg',
-    },
-    {
-        title: 'NextJs',
-        src: '/icons/tools/nextjs.svg',
-    },
-    {
-        title: 'Git',
-        src: '/icons/tools/git.svg',
-    },
-    {
-        title: 'Tailwind',
-        src: '/icons/tools/tailwind.svg',
-    },
-    {
-        title: 'NodeJs',
-        src: '/icons/tools/nodejs.svg',
-    },
-    {
-        title: 'Firebase',
-        src: '/icons/tools/firebase.svg',
-    },
-    {
-        title: 'Sql server',
-        src: '/icons/tools/sqlserver.svg',
-    },
-]
+import { skills } from '../../utils/data'
 
 const About: NextPage = () => {
     return (

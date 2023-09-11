@@ -2,10 +2,9 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
     return (
-        <Html>
+        <Html lang="es">
             <Head>
                 {/* <!-- HTML Meta Tags --> */}
-                <title>Erik Garcia | Frontend Developer</title>
                 <meta name="description" content="Portafolio" />
 
                 {/* <!-- Facebook Meta Tags --> */}

@@ -1,3 +1,50 @@
+export const skills = [
+    {
+        title: 'Html',
+        src: '/icons/tools/html.svg',
+    },
+    {
+        title: 'Css',
+        src: '/icons/tools/css.svg',
+    },
+    {
+        title: 'Javascript',
+        src: '/icons/tools/js.svg',
+    },
+    {
+        title: 'Typescript',
+        src: '/icons/tools/ts.svg',
+    },
+    {
+        title: 'React',
+        src: '/icons/tools/react.svg',
+    },
+    {
+        title: 'NextJs',
+        src: '/icons/tools/nextjs.svg',
+    },
+    {
+        title: 'Git',
+        src: '/icons/tools/git.svg',
+    },
+    {
+        title: 'Tailwind',
+        src: '/icons/tools/tailwind.svg',
+    },
+    {
+        title: 'NodeJs',
+        src: '/icons/tools/nodejs.svg',
+    },
+    {
+        title: 'Firebase',
+        src: '/icons/tools/firebase.svg',
+    },
+    {
+        title: 'Sql server',
+        src: '/icons/tools/sqlserver.svg',
+    },
+]
+
 export const projects: {
     src: string
     title: string
@@ -5,7 +52,7 @@ export const projects: {
     urls?: { href: string; src: string; alt: string }[]
 }[] = [
     {
-        src: '/images/landing-page.jpg',
+        src: '/images/landing-page.webp',
         title: 'Landing Page',
         keys: ['Html', 'Css', 'Js'],
         urls: [
@@ -22,7 +69,7 @@ export const projects: {
         ],
     },
     {
-        src: '/images/crud-pokemon.jpg',
+        src: '/images/crud-pokemon.webp',
         title: 'Crud Pokemon',
         keys: ['React', 'Css', 'Api', 'Vite'],
         urls: [
@@ -56,7 +103,7 @@ export const projects: {
     //     ],
     // },
     {
-        src: '/images/resource-manager.jpg',
+        src: '/images/resource-manager.webp',
         title: 'Resource Manager',
         keys: ['React', 'Firebase', 'react-router'],
         urls: [

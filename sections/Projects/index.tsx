@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import CardProject from './CardProject'
-import { projects } from './data'
+import { projects } from '../../utils/data'
 import { ContainerProjects } from './style'
 
 const Projects: NextPage = () => {

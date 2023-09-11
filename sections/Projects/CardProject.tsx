@@ -28,14 +28,22 @@ const CardProject = ({
                 boxShadow: 'rgb(0 0 0 / 16%) 0px 0px 7px',
             }}
         >
-            <div>
+            <div
+                style={{
+                    height: '250px',
+                }}
+            >
                 <img
                     style={{
                         width: '100%',
-                        height: '250px',
+                        height: '100%',
                         objectFit: 'cover',
                     }}
+                    loading="lazy"
+                    height={'250px'}
+                    width={'450px'}
                     src={src}
+                    alt={title}
                 />
             </div>
             <div
@@ -56,7 +64,7 @@ const CardProject = ({
                         <p
                             key={i}
                             style={{
-                                background: 'gray',
+                                background: '#4f4f4f',
                                 padding: '0.2em',
                                 borderRadius: '5px',
                                 color: 'white',
@@ -72,7 +80,7 @@ const CardProject = ({
                     {urls.map((url, i) => (
                         <a key={i} href={url.href} target="_blank" rel="noopener noreferrer">
                             <span>
-                                <Image src={url.src} alt={url.alt} width={30} height={30} />
+                                <Image loading="lazy" src={url.src} alt={url.alt} width={30} height={30} />
                             </span>
                         </a>
                     ))}
@@ -83,4 +91,3 @@ const CardProject = ({
 }
 
 export default CardProject
-

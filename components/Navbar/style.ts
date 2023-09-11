@@ -18,7 +18,7 @@ export const Header = styled.header`
     }
 `
 
-export const Logo = styled.a`
+export const Logo = styled.div`
     height: 40px;
     cursor: pointer;
 `
