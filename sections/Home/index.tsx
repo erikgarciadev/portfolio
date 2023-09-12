@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
-import { HomeStyled } from './style'
+import styles from './style.module.css'
 
 const Home: NextPage = () => {
     return (
-        <HomeStyled id="home" className="container">
-            <div style={{ width: '50%', textAlign: 'center' }}>
+        <section id="home" className={`${styles.home} container`}>
+            <div>
                 <p style={{ fontSize: '26px', color: 'black' }}>Hola 👋, soy</p>
                 <p style={{ fontSize: '36px', color: 'var(--primary)' }}>Erik Garcia</p>
                 <p style={{ fontSize: '18px', color: '#4f4f4f' }}>Desarrollador Frontend</p>
@@ -27,10 +27,10 @@ const Home: NextPage = () => {
                     </button>
                 </a>
             </div>
-            <div style={{ width: '50%', textAlign: 'center' }}>
+            <div>
                 <Image priority height="400" width="300" src="/image.webp" alt="" />
             </div>
-        </HomeStyled>
+        </section>
     )
 }
 
