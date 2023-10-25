@@ -1,20 +1,23 @@
 import type { NextPage } from 'next'
 import CardProject from './CardProject'
 import { projects } from '../../utils/data'
-import { ContainerProjects } from './style'
+import { SECTIONS } from '../../utils/constants'
+import styles from './style.module.css'
+import useTranslation from 'next-translate/useTranslation'
 
 const Projects: NextPage = () => {
+    const { t } = useTranslation('utils')
     return (
         <section
             className="container"
-            id="projects"
+            id={SECTIONS.projects}
             style={{
                 padding: '2em',
                 paddingTop: '80px',
             }}
         >
-            <h2 style={{ textAlign: 'center', paddingTop: '20px', paddingBottom: '20px' }}>Proyectos</h2>
-            <ContainerProjects>
+            <h2 style={{ textAlign: 'center', paddingTop: '20px', paddingBottom: '20px' }}>{t('sections.projects')}</h2>
+            <div className={styles.container_projects}>
                 {projects.map((project, i) => (
                     <CardProject
                         key={i}
@@ -24,7 +27,7 @@ const Projects: NextPage = () => {
                         urls={project.urls}
                     />
                 ))}
-            </ContainerProjects>
+            </div>
         </section>
     )
 }

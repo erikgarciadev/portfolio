@@ -1,10 +1,14 @@
-import styled from 'styled-components'
-
-export const FooterStyled = styled.footer`
+.footer {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2em;
     gap: 1em;
-`
+}
+
+.box {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+}
 

@@ -1,0 +1,12 @@
+{
+    "names": "Nombres",
+    "email": "Email",
+    "subject": "Asunto",
+    "subject_placeholder": "Cuéntame los detalles del servicio para poder apoyarte a realizarlo",
+    "send": "Enviar",
+    "message_success_send": "¡Muchas gracias! Nos comunicaremos pronto contigo",
+    "message_error_send": "Ocurrió un error. Volver a intentar",
+    "invalid_format": "Formato inválido",
+    "required": "Requerido"
+}
+

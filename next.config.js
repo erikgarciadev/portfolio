@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
+
+const nextTranslate = require('next-translate-plugin')
+
+module.exports = nextTranslate({
     reactStrictMode: true,
+    i18n: {
+        locales: ['es', 'en'],
+        defaultLocale: 'es',
+    },
     // webpack: (config, { isServer }) => {
     //     if (!isServer) {
     //         // set 'fs' to an empty module on the client to prevent this error on build --> Error: Can't resolve 'fs'
@@ -13,5 +20,4 @@ module.exports = {
 
     //     return config
     // },
-}
-
+})

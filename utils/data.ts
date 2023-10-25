@@ -1,3 +1,27 @@
+import { SECTIONS } from './constants'
+
+export const socialMedia: {
+    href: string
+    src: string
+    alt: string
+}[] = [
+    {
+        href: 'https://www.linkedin.com/in/erik-garcia-tacas/',
+        src: '/icons/socialMedia/linkedin.svg',
+        alt: 'Linkedin Logo',
+    },
+    {
+        href: 'https://twitter.com/erikgarciadev',
+        src: '/icons/socialMedia/twitter.svg',
+        alt: 'Twitter Logo',
+    },
+    {
+        href: 'https://github.com/erikgarciadev',
+        src: '/icons/socialMedia/github.svg',
+        alt: 'Github Logo',
+    },
+]
+
 export const skills = [
     {
         title: 'Html',
@@ -105,7 +129,7 @@ export const projects: {
     {
         src: '/images/resource-manager.webp',
         title: 'Resource Manager',
-        keys: ['React', 'Firebase', 'react-router'],
+        keys: ['Angular', 'Ionic', 'Firebase', 'Tailwind'],
         urls: [
             {
                 src: '/icons/socialMedia/internet.svg',
@@ -114,5 +138,35 @@ export const projects: {
             },
         ],
     },
+    {
+        src: '/images/procustodia.webp',
+        title: 'Landing Page Procustodia',
+        keys: ['NextJs', 'Google Maps'],
+        urls: [
+            {
+                src: '/icons/socialMedia/internet.svg',
+                href: 'https://www.procustodia.com/',
+                alt: 'Internet Icon',
+            },
+        ],
+    },
 ]
 
+export const sections = [
+    {
+        href: `#${SECTIONS.home}`,
+        name: 'home',
+    },
+    {
+        href: `#${SECTIONS.about}`,
+        name: 'about',
+    },
+    {
+        href: `#${SECTIONS.projects}`,
+        name: 'projects',
+    },
+    {
+        href: `#${SECTIONS.contact}`,
+        name: 'contact',
+    },
+]

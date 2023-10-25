@@ -8,7 +8,7 @@ import About from '../sections/About'
 
 const Index: NextPage = () => {
     return (
-        <div>
+        <>
             <main>
                 <Navbar />
                 <Home />
@@ -17,7 +17,7 @@ const Index: NextPage = () => {
                 <Contact />
             </main>
             <Footer></Footer>
-        </div>
+        </>
     )
 }
 
