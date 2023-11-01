@@ -1,0 +1,13 @@
+{
+    "sections": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "pageOptions": {
+        "switch_es": "Switch to spanish",
+        "switch_en": "Switch to english"
+    }
+}
+

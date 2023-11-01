@@ -6,12 +6,13 @@ export default function Document() {
             <Head>
                 {/* <!-- HTML Meta Tags --> */}
                 <meta name="description" content="Portafolio" />
+                <meta name="keywords" content="portfolio, personal website, frontend developer" />
 
                 {/* <!-- Facebook Meta Tags --> */}
                 <meta property="og:url" content="https://erikgarciadev.netlify.app/" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Erik Garcia | Frontend Developer" />
-                <meta property="og:description" content="Portafolio" />
+                <meta property="og:description" content="Portfolio" />
                 <meta
                     property="og:image"
                     content="https://media.licdn.com/dms/image/D4D16AQFC6nngGKdO_g/profile-displaybackgroundimage-shrink_350_1400/0/1694099633070?e=1699488000&v=beta&t=9DPSPFfqTi3de9SeAbXXyTno1LZH0PU4txhbSmenmZ4"
@@ -22,7 +23,7 @@ export default function Document() {
                 <meta property="twitter:domain" content="erikgarciadev.netlify.app" />
                 <meta property="twitter:url" content="https://erikgarciadev.netlify.app/" />
                 <meta name="twitter:title" content="Erik Garcia | Frontend Developer" />
-                <meta name="twitter:description" content="Portafolio" />
+                <meta name="twitter:description" content="Portfolio" />
                 <meta
                     name="twitter:image"
                     content="https://media.licdn.com/dms/image/D4D16AQFC6nngGKdO_g/profile-displaybackgroundimage-shrink_350_1400/0/1694099633070?e=1699488000&v=beta&t=9DPSPFfqTi3de9SeAbXXyTno1LZH0PU4txhbSmenmZ4"

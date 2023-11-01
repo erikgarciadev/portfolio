@@ -22,7 +22,7 @@ export const Logo = styled.div`
     height: 40px;
     cursor: pointer;
 `
-export const IconMenu = styled.div.attrs((props) => ({
+export const IconMenu = styled.a.attrs((props) => ({
     className: props.className,
 }))`
     color: var(--primary);
@@ -43,6 +43,7 @@ export const IconMenu = styled.div.attrs((props) => ({
 export const Nav = styled.nav<{ active: boolean }>`
     > a {
         padding: 0 1em;
+        font-weight: 600;
         &:hover {
             color: var(--primary);
         }
@@ -54,7 +55,7 @@ export const Nav = styled.nav<{ active: boolean }>`
         left: 0;
         right: 0;
         background: var(--white);
-        padding: 0 2em;
+        padding: 0.3em 2em;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         transition: all 0.2s linear;
         ${(props) =>

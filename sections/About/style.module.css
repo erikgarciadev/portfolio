@@ -1,0 +1,37 @@
+.about {
+    display: flex;
+    justify-content: center;
+    padding: 0 2em;
+    flex-direction: column;
+    padding-top: 80px;
+    gap: 0.5em;
+}
+
+.about div h2 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.about p:not(:first-child) {
+    margin-top: 0.35em;
+}
+
+.about > div div:last-child {
+    display: flex;
+    gap: 0.8em;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+    .about {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2.5em;
+    }
+
+    .about > div {
+        width: 50%;
+        height: 100%;
+    }
+}

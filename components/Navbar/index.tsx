@@ -3,10 +3,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import { Header, Logo, IconMenu, Nav } from './style'
+import useTranslation from 'next-translate/useTranslation'
+import { sections } from '../../utils/data'
 
 const Navbar: NextPage = () => {
     const [activeNavbar, setActiveNavbar] = useState<boolean>(false)
     const iconRef = useRef<any>(null)
+    const { t } = useTranslation('utils')
 
     useEffect(() => {
         const onScroll = (e: Event) => {
@@ -35,7 +38,11 @@ const Navbar: NextPage = () => {
 
                 <IconMenu
                     ref={iconRef}
-                    onClick={() => setActiveNavbar(!activeNavbar)}
+                    href="#"
+                    onClick={(event) => {
+                        event.preventDefault()
+                        setActiveNavbar(!activeNavbar)
+                    }}
                     className={`fas ${activeNavbar ? 'fa-times' : 'fa-bars'}`}
                 >
                     <Image
@@ -46,10 +53,11 @@ const Navbar: NextPage = () => {
                     />
                 </IconMenu>
                 <Nav active={activeNavbar}>
-                    <a href="#home">Inicio</a>
-                    <a href="#about">Sobre mí</a>
-                    <a href="#projects">Proyectos</a>
-                    {/* <a href="#contact">Contacto</a> */}
+                    {sections.map((section) => (
+                        <a key={section.href} href={section.href}>
+                            {t(`sections.${section.name}`)}
+                        </a>
+                    ))}
                 </Nav>
             </div>
         </Header>

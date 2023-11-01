@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import styles from './style.module.css'
 
 const CardProject = ({
     src,
@@ -19,22 +20,21 @@ const CardProject = ({
     description?: string
 }) => {
     return (
-        <div
-            style={{
-                // padding: '0.5em',
-                // background: 'red',
-                borderRadius: '20px',
-                overflow: 'hidden',
-                boxShadow: 'rgb(0 0 0 / 16%) 0px 0px 7px',
-            }}
-        >
+        <div className={styles.card_project}>
             <div
                 style={{
                     height: '250px',
                     position: 'relative',
                 }}
             >
-                <Image loading="lazy" layout="fill" objectFit="cover" src={src} alt={title} />
+                <Image
+                    className={styles.img_project}
+                    loading="lazy"
+                    layout="fill"
+                    objectFit="cover"
+                    src={src}
+                    alt={title}
+                />
             </div>
             <div
                 style={{
@@ -51,27 +51,22 @@ const CardProject = ({
                 </p>
                 <div style={{ display: 'flex', gap: '0.5em', width: '100%', flexWrap: 'wrap' }}>
                     {keys.map((key, i) => (
-                        <p
-                            key={i}
-                            style={{
-                                background: '#4f4f4f',
-                                padding: '0.2em',
-                                borderRadius: '5px',
-                                color: 'white',
-                                minWidth: '40px',
-                                textAlign: 'center',
-                            }}
-                        >
+                        <p key={i} className={styles.card_project_badge}>
                             {key}
                         </p>
                     ))}
                 </div>
-                <div style={{ display: 'flex', gap: '0.5em', width: '100%', flexWrap: 'wrap', marginTop: '1em' }}>
+                <div className={styles['card_project_container-icons']}>
                     {urls.map((url, i) => (
                         <a key={i} href={url.href} target="_blank" rel="noopener noreferrer">
-                            <span>
-                                <Image loading="lazy" src={url.src} alt={url.alt} width={30} height={30} />
-                            </span>
+                            <Image
+                                loading="lazy"
+                                aria-label={url.alt}
+                                src={url.src}
+                                alt={url.alt}
+                                width={30}
+                                height={30}
+                            />
                         </a>
                     ))}
                 </div>

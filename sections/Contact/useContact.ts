@@ -1,5 +1,6 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react'
 import { encode, isValidEmail } from '../../utils/util'
+import useTranslation from 'next-translate/useTranslation'
 
 const InitalForm = {
     email: '',
@@ -20,6 +21,9 @@ export default function useContact() {
         type: 'danger',
         show: false,
     })
+
+    const { t } = useTranslation('contact')
+
     const handleChange = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>) => {
         const name = e.target.name
         setForm({
@@ -47,7 +51,7 @@ export default function useContact() {
             .then(() => {
                 setAlert({
                     ...alert,
-                    message: '¡Muchas gracias! Nos comunicaremos pronto contigo',
+                    message: t('message_success_send'),
                     type: 'success',
                     show: true,
                 })
@@ -60,7 +64,7 @@ export default function useContact() {
                 setAlert({
                     ...alert,
                     type: 'danger',
-                    message: 'Ocurrió un error. Volver a intentar',
+                    message: t('message_error_send'),
                     show: true,
                 })
                 setLoading(false)
@@ -72,14 +76,14 @@ export default function useContact() {
         if (!isValidEmail(form.email)) {
             _errors = {
                 ..._errors,
-                email: 'Formato inválido',
+                email: t('invalid_format'),
             }
         }
         for (const [field, value] of Object.entries(form)) {
             if (!value) {
                 _errors = {
                     ..._errors,
-                    [field]: 'Requerido',
+                    [field]: t('required'),
                 }
             }
         }
@@ -104,4 +108,3 @@ export default function useContact() {
         loading,
     }
 }
-

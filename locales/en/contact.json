@@ -1,0 +1,12 @@
+{
+    "names": "Names",
+    "email": "Email",
+    "subject": "Subject",
+    "subject_placeholder": "Tell me the details of the service so that I can help you to carry it out",
+    "send": "Send",
+    "message_success_send": "Thank you very much! We will contact you soon",
+    "message_error_send": "An error occurred. Please try again",
+    "invalid_format": "Invalid format",
+    "required": "Required"
+}
+
