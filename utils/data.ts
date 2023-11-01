@@ -92,23 +92,23 @@ export const projects: {
             },
         ],
     },
-    {
-        src: '/images/crud-pokemon.webp',
-        title: 'Crud Pokemon',
-        keys: ['React', 'Css', 'Api', 'Vite'],
-        urls: [
-            {
-                src: '/icons/socialMedia/github.svg',
-                href: 'https://github.com/erikgarciadev/frontend-bp ',
-                alt: 'Github Icon',
-            },
-            {
-                src: '/icons/socialMedia/internet.svg',
-                href: 'https://erikgarciadev.github.io/frontend-bp/',
-                alt: 'Internet Icon',
-            },
-        ],
-    },
+    // {
+    //     src: '/images/crud-pokemon.webp',
+    //     title: 'Crud Pokemon',
+    //     keys: ['React', 'Css', 'Api', 'Vite'],
+    //     urls: [
+    //         {
+    //             src: '/icons/socialMedia/github.svg',
+    //             href: 'https://github.com/erikgarciadev/frontend-bp ',
+    //             alt: 'Github Icon',
+    //         },
+    //         {
+    //             src: '/icons/socialMedia/internet.svg',
+    //             href: 'https://erikgarciadev.github.io/frontend-bp/',
+    //             alt: 'Internet Icon',
+    //         },
+    //     ],
+    // },
     // {
     //     src: '/images/portafolio.jpg',
     //     title: 'Portafolio',

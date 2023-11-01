@@ -38,7 +38,11 @@ const Navbar: NextPage = () => {
 
                 <IconMenu
                     ref={iconRef}
-                    onClick={() => setActiveNavbar(!activeNavbar)}
+                    href="#"
+                    onClick={(event) => {
+                        event.preventDefault()
+                        setActiveNavbar(!activeNavbar)
+                    }}
                     className={`fas ${activeNavbar ? 'fa-times' : 'fa-bars'}`}
                 >
                     <Image

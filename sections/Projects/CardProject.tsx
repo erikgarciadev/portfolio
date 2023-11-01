@@ -56,12 +56,17 @@ const CardProject = ({
                         </p>
                     ))}
                 </div>
-                <div style={{ display: 'flex', gap: '0.5em', width: '100%', flexWrap: 'wrap', marginTop: '1em' }}>
+                <div className={styles['card_project_container-icons']}>
                     {urls.map((url, i) => (
                         <a key={i} href={url.href} target="_blank" rel="noopener noreferrer">
-                            <span>
-                                <Image loading="lazy" src={url.src} alt={url.alt} width={30} height={30} />
-                            </span>
+                            <Image
+                                loading="lazy"
+                                aria-label={url.alt}
+                                src={url.src}
+                                alt={url.alt}
+                                width={30}
+                                height={30}
+                            />
                         </a>
                     ))}
                 </div>

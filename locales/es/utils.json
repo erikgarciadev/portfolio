@@ -4,6 +4,10 @@
         "about": "Sobre mí",
         "projects": "Proyectos",
         "contact": "Contacto"
+    },
+    "pageOptions": {
+        "switch_es":"Cambiar a español",
+        "switch_en": "Cambiar a inglés"
     }
 }
 

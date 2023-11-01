@@ -18,6 +18,19 @@
     transform: scale(1.1);
 } */
 
+.card_project_container-icons {
+    display: flex;
+    gap: 0.5em;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 1em;
+}
+
+.card_project_container-icons a {
+    width: 30px;
+    height: 30px;
+}
+
 .card_project_badge {
     background: #4f4f4f;
     padding: 0.2em;
