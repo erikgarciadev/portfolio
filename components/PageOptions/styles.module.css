@@ -2,7 +2,7 @@
     position: fixed;
     width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     padding-right: 2em;
     z-index: 10;
     top: 80px;
