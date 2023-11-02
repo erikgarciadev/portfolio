@@ -150,6 +150,28 @@ export const projects: {
             },
         ],
     },
+    {
+        src: '/images/rimac.webp',
+        title: 'Rimac technical test',
+        keys: ['React', 'Vite', 'react-hook-form', 'redux-toolkit', 'react-router-dom'],
+        urls: [
+            {
+                src: '/icons/socialMedia/github.svg',
+                href: 'https://github.com/erikgarciadev/reto-tecnico-rimac',
+                alt: 'Github Icon',
+            },
+            {
+                src: '/icons/socialMedia/internet.svg',
+                href: 'https://reto-tecnico-rimac.netlify.app/',
+                alt: 'Internet Icon',
+            },
+            {
+                src: '/icons/tools/figma.svg',
+                href: 'https://www.figma.com/file/KGftIKxhcVm41kTKMsfTh2/Frontend-Challenge-2023?type=design&node-id=6994-137449&mode=design&t=NBCTHcjxw4a4gUyD-0',
+                alt: 'Figma Icon',
+            },
+        ],
+    },
 ]
 
 export const sections = [

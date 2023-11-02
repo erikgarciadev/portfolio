@@ -21,12 +21,7 @@ const CardProject = ({
 }) => {
     return (
         <div className={styles.card_project}>
-            <div
-                style={{
-                    height: '250px',
-                    position: 'relative',
-                }}
-            >
+            <div className={styles['card_project_container-img']}>
                 <Image
                     className={styles.img_project}
                     loading="lazy"
@@ -36,26 +31,25 @@ const CardProject = ({
                     alt={title}
                 />
             </div>
-            <div
-                style={{
-                    padding: '1em 1em',
-                }}
-            >
-                <p
-                    style={{
-                        fontSize: '24px',
-                        marginBottom: '10px',
-                    }}
-                >
-                    {title}
-                </p>
-                <div style={{ display: 'flex', gap: '0.5em', width: '100%', flexWrap: 'wrap' }}>
-                    {keys.map((key, i) => (
-                        <p key={i} className={styles.card_project_badge}>
-                            {key}
-                        </p>
-                    ))}
+            <div className={styles['card_project_container-information']}>
+                <div>
+                    <p
+                        style={{
+                            fontSize: '24px',
+                            marginBottom: '10px',
+                        }}
+                    >
+                        {title}
+                    </p>
+                    <div style={{ display: 'flex', gap: '0.5em', width: '100%', flexWrap: 'wrap' }}>
+                        {keys.map((key, i) => (
+                            <p key={i} className={styles.card_project_badge}>
+                                {key}
+                            </p>
+                        ))}
+                    </div>
                 </div>
+
                 <div className={styles['card_project_container-icons']}>
                     {urls.map((url, i) => (
                         <a key={i} href={url.href} target="_blank" rel="noopener noreferrer">
