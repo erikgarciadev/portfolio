@@ -1,0 +1,44 @@
+@keyframes pulse {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.h-0 {
+    height: 0;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.skeleton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #e2e8f0;
+}
+
+.skeleton svg {
+    fill: white;
+    width: 30px;
+    height: 30px;
+}
+
+.image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.flex {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}

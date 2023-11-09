@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from './style.module.css'
+import ImageSkeleton from '../../components/ImageSkeleton'
 
 const CardProject = ({
     src,
@@ -22,7 +23,7 @@ const CardProject = ({
     return (
         <div className={styles.card_project}>
             <div className={styles['card_project_container-img']}>
-                <Image
+                <ImageSkeleton
                     className={styles.img_project}
                     loading="lazy"
                     layout="fill"

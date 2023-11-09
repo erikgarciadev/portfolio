@@ -8,6 +8,8 @@ export const SECTIONS = Object.freeze({
 export const LANGUAGE_DEFAULT = 'es'
 
 export const URL_CV = Object.freeze({
-    "es":"/documents/cv.pdf",
-    "en":"/documents/en/cv.pdf"
+    es: '/documents/cv.pdf',
+    en: '/documents/en/cv.pdf',
 })
+
+export const URL_IMAGE_NOT_FOUND = '/not-found.webp'
