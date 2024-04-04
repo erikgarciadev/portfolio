@@ -15,7 +15,7 @@ export default function Document() {
                 <meta property="og:description" content="Portfolio" />
                 <meta
                     property="og:image"
-                    content="https://media.licdn.com/dms/image/D4D16AQFC6nngGKdO_g/profile-displaybackgroundimage-shrink_350_1400/0/1694099633070?e=1699488000&v=beta&t=9DPSPFfqTi3de9SeAbXXyTno1LZH0PU4txhbSmenmZ4"
+                    content="https://media.licdn.com/dms/image/D4D16AQFC6nngGKdO_g/profile-displaybackgroundimage-shrink_350_1400/0/1694099636898?e=1717632000&v=beta&t=LphuEoG5q6IrrcBlJN17ls4ygjJGLTDdpnwXfvgtSsc"
                 />
 
                 {/* <!-- Twitter Meta Tags --> */}
@@ -26,7 +26,7 @@ export default function Document() {
                 <meta name="twitter:description" content="Portfolio" />
                 <meta
                     name="twitter:image"
-                    content="https://media.licdn.com/dms/image/D4D16AQFC6nngGKdO_g/profile-displaybackgroundimage-shrink_350_1400/0/1694099633070?e=1699488000&v=beta&t=9DPSPFfqTi3de9SeAbXXyTno1LZH0PU4txhbSmenmZ4"
+                    content="https://media.licdn.com/dms/image/D4D16AQFC6nngGKdO_g/profile-displaybackgroundimage-shrink_350_1400/0/1694099636898?e=1717632000&v=beta&t=LphuEoG5q6IrrcBlJN17ls4ygjJGLTDdpnwXfvgtSsc"
                 />
 
                 {/* <!-- Meta Tags Generated via https://www.opengraph.xyz --> */}
